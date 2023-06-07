@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form to create a new resource</title>
+    <script>
+        function updateFormAction(action) {
+            let form = document.getElementById("form-log");
+            form.action = action;
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+<form id="form-log" method="POST">
+    <label for="login" id="login">Login</label>
+    <input name="login" />
+    <br/>
+    <label for="passwd" id="passwd">Password </label>
+    <input type="password" name="passwd" />
+    <br/>
+    <input type="submit" onclick="updateFormAction('../')" value="Logon" />
+    <input type="submit" onclick="updateFormAction('../signup')" value="Sign up" />
+</form>
+</body>
+</html>

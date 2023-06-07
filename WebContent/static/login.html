@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 300px;
+            padding: 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="movies.html">Home</a></li>
+            <li><a href="create_movie.html">Create Movie</a></li>
+            <li><a href="search_city.html">Search City</a></li>
+            <li><a href="search_movie.html">Search Movie</a></li>
+            <li><a href="login.html">LogIn</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+            <li><form id="form1" action="../logout" method="POST">
+                <a href="javascript:;" onclick="document.getElementById('form1').submit();">Logout</a>
+                <input type="hidden" name="mess" value=LogOut/>
+            </form></li>
+        </ul>
+    </nav>
+</header>
+<h1>Login</h1>
+<form action="../" method="POST">
+    <label for="login">Username:</label>
+    <input type="text" id="login" name="login" placeholder="Enter your username" required>
+
+    <label for="passwd">Password:</label>
+    <input type="password" id="passwd" name="passwd" placeholder="Enter your password" required>
+
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
